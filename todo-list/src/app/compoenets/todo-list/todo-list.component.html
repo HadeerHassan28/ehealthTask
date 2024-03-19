@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div
+      class="col-sm-12 col-md-4 col-lg-6 mb-3 d-flex justify-content-center mt-4"
+      *ngFor="let task of tasks"
+    >
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <h5 class="card-title">{{ task.title }}</h5>
+          <p class="card-text">
+            {{ task.description }}
+          </p>
+
+          <p class="card-text progress">
+            {{ task.completed ? "Complete" : "In Progress" }}
+          </p>
+          <button href="#" class="card-link btn btn-secondary">Update</button>
+          <button href="#" class="card-link btn btn-danger">Delate</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

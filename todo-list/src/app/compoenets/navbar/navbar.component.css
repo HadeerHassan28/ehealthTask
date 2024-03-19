@@ -1,0 +1,7 @@
+.navbar {
+  background: inherit !important;
+}
+
+.home {
+  color: var(--main);
+}
