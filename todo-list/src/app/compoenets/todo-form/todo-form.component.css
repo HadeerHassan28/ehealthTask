@@ -1,0 +1,21 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* width: 50%; */
+  align-items: center;
+  /* justify-content: center; */
+}
+.input {
+  width: 50%;
+  height: 6vh;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  background: inherit;
+  padding-left: 20px;
+  color: var(--main);
+}
+.label {
+  font-style: 40px;
+  font-weight: bold;
+}
