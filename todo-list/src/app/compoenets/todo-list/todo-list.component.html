@@ -19,9 +19,13 @@
             {{ task.status === "Complete" ? "Complete" : "In Progress" }}
           </p>
 
-          <button href="#" class="card-link btn btn-secondary">Update</button>
           <button
-            href="#"
+            class="card-link btn btn-secondary"
+            [routerLink]="['/update', task.id]"
+          >
+            Update
+          </button>
+          <button
             class="card-link btn btn-danger"
             (click)="delateTask(task.id)"
           >

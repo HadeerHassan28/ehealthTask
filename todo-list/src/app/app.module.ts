@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './compoenets/navbar/navbar.component';
 import { TodoFormComponent } from './compoenets/todo-form/todo-form.component';
 import { TodoListComponent } from './compoenets/todo-list/todo-list.component';
+import { TodoUpdateComponent } from './compoenets/todo-update/todo-update.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { TodoListComponent } from './compoenets/todo-list/todo-list.component';
     NavbarComponent,
     TodoFormComponent,
     TodoListComponent,
+    TodoUpdateComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
