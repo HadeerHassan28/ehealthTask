@@ -14,4 +14,14 @@ export class TodoListComponent implements OnInit {
   ngOnInit(): void {
     this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
   }
+
+  loadTask(): void {
+    this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
+  }
+  delateTask(id: string): void {
+    this.taskService.delateTask(id).subscribe(() => {
+      console.log('Delated');
+      this.loadTask();
+    });
+  }
 }

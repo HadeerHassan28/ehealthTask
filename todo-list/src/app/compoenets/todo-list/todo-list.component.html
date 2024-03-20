@@ -20,7 +20,13 @@
           </p>
 
           <button href="#" class="card-link btn btn-secondary">Update</button>
-          <button href="#" class="card-link btn btn-danger">Delate</button>
+          <button
+            href="#"
+            class="card-link btn btn-danger"
+            (click)="delateTask(task.id)"
+          >
+            Delate
+          </button>
         </div>
       </div>
     </div>

@@ -22,4 +22,8 @@ export class TaskService {
     const taskWithId: Task = { ...task, id: taskId };
     return this.http.post<Task[]>(this.apiUrl, taskWithId);
   }
+  delateTask(id: string): Observable<any> {
+    const url = `${this.apiUrl}/${id}`;
+    return this.http.delete(url);
+  }
 }
