@@ -14,10 +14,11 @@
 
           <p
             class="card-text progress"
-            [style.color]="task.completed ? '#327646' : '#b26859'"
+            [style.color]="task.status === 'Complete' ? '#327646' : '#b26859'"
           >
-            {{ task.completed ? "Complete" : "In Progress" }}
+            {{ task.status === "Complete" ? "Complete" : "In Progress" }}
           </p>
+
           <button href="#" class="card-link btn btn-secondary">Update</button>
           <button href="#" class="card-link btn btn-danger">Delate</button>
         </div>
