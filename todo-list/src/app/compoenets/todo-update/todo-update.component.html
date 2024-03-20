@@ -1,14 +1,11 @@
 <div class="container">
   <h1 class="title mt-4">Update {{ task?.title }}</h1>
+  <!-- <div class="row row-container mt-5">
+    <div class="col-sm-12 col-md-6 col-lg-6">
+      <img src="/assets/Images/update.jpeg" alt="Task Image" class="img" />
+    </div> -->
+  <!-- <div class="col-sm-12 col-md-6 col-lg-6"> -->
   <form class="form-container" (submit)="onSubmit()">
-    <!-- <label class="label">Task Title</label>
-    <input
-      type="text"
-      placeholder="Enter task name"
-      class="input"
-      name="title"
-      [(ngModle)]="task?.title"
-    /> -->
     <label class="form-label label mb-0 mt-3">Task description</label>
     <input
       type="text"
@@ -28,8 +25,8 @@
       required
       class="form-control input"
     />
-    <button class="btn btn-success w-50 mt-2" [routerLink]="['/home']">
-      Update
-    </button>
+    <button class="btn btn-success mt-2 w-50" type="submit">Update</button>
   </form>
 </div>
+<!-- </div>
+</div> -->

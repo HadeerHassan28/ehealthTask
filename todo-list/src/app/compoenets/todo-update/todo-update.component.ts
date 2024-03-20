@@ -23,7 +23,7 @@ export class TodoUpdateComponent implements OnInit {
     if (id !== null) {
       this.taskId = id;
       this.taskService.getTask(this.taskId).subscribe((task) => {
-        this.task = task || { description: '', status: '' };
+        this.task = task;
       });
     }
   }

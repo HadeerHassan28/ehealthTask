@@ -10,6 +10,7 @@ import { NavbarComponent } from './compoenets/navbar/navbar.component';
 import { TodoFormComponent } from './compoenets/todo-form/todo-form.component';
 import { TodoListComponent } from './compoenets/todo-list/todo-list.component';
 import { TodoUpdateComponent } from './compoenets/todo-update/todo-update.component';
+import { ErrorComponent } from './compoenets/error/error.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { TodoUpdateComponent } from './compoenets/todo-update/todo-update.compon
     TodoFormComponent,
     TodoListComponent,
     TodoUpdateComponent,
+    ErrorComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
