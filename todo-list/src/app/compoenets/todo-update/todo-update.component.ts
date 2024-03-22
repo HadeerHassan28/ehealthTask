@@ -9,7 +9,13 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./todo-update.component.css'],
 })
 export class TodoUpdateComponent implements OnInit {
-  task: Task = { description: '', status: '', title: '', id: '' };
+  task: Task = {
+    description: '',
+    complete: true,
+    title: '',
+    id: '',
+    status: '',
+  };
   taskId: string | null = null;
 
   constructor(
@@ -31,6 +37,12 @@ export class TodoUpdateComponent implements OnInit {
 
   onSubmit(): void {
     if (this.taskId !== null) {
+      if (this.task.status.toLowerCase() === 'complete') {
+        this.task.complete = true;
+      } else if (this.task.status.toLowerCase() === 'in progress') {
+        this.task.complete = false;
+      }
+
       this.taskService.updateTask(this.taskId, this.task).subscribe(() => {
         console.log('updated');
         this.toastr.success('Task is Updated', 'Success!');

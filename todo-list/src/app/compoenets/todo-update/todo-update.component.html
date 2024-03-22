@@ -21,7 +21,7 @@
     <label class="form-label label mb-0 mt-3">Task Statues</label>
     <input
       type="text"
-      [placeholder]="task.status != null ? task.status : 'Enter the status'"
+      [placeholder]="task.status === 'complete' ? 'complete' : 'in progress'"
       [(ngModel)]="task.status"
       required
       class="form-control input"

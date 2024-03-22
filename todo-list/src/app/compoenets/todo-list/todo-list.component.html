@@ -14,9 +14,9 @@
 
           <p
             class="card-text progress"
-            [style.color]="task.status === 'Complete' ? '#327646' : '#251e7d'"
+            [style.color]="task.complete ? '#327646' : '#251e7d'"
           >
-            {{ task.status === "Complete" ? "Complete" : "In Progress" }}
+            {{ task.complete ? "Complete" : "In Progress" }}
           </p>
 
           <button

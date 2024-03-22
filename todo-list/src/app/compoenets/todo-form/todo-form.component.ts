@@ -12,8 +12,9 @@ export class TodoFormComponent {
   task: Task = {
     title: '',
     description: '',
-    status: '',
+    complete: true,
     id: '',
+    status: '',
   };
   constructor(
     private taskServices: TaskService,
@@ -24,9 +25,20 @@ export class TodoFormComponent {
   ngOnInit: () => void = () => {};
 
   onSubmit(): void {
+    if (this.task.status.toLowerCase() === 'complete') {
+      this.task.complete = true;
+    } else if (this.task.status.toLowerCase() === 'in progress') {
+      this.task.complete = false;
+    }
     this.taskServices.addTask(this.task).subscribe(() => {
-      console.log('Success');
-      this.task = { title: '', description: '', id: '', status: '' };
+      // console.log('Success');
+      this.task = {
+        title: '',
+        description: '',
+        id: '',
+        complete: true,
+        status: '',
+      };
       this.toastr.success('Task is Added', 'Success!');
       this.router.navigate(['/home']);
     });
