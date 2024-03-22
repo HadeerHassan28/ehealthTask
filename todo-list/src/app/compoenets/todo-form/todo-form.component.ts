@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Task } from 'src/app/services/task';
 import { TaskService } from 'src/app/services/task.service';
-
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-todo-form',
   templateUrl: './todo-form.component.html',
@@ -15,7 +15,11 @@ export class TodoFormComponent {
     status: '',
     id: '',
   };
-  constructor(private taskServices: TaskService, private router: Router) {}
+  constructor(
+    private taskServices: TaskService,
+    private router: Router,
+    private toastr: ToastrService
+  ) {}
 
   ngOnInit: () => void = () => {};
 
@@ -23,6 +27,7 @@ export class TodoFormComponent {
     this.taskServices.addTask(this.task).subscribe(() => {
       console.log('Success');
       this.task = { title: '', description: '', id: '', status: '' };
+      this.toastr.success('Task is Added', 'Success!');
       this.router.navigate(['/home']);
     });
   }

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Task } from 'src/app/services/task';
 import { TaskService } from 'src/app/services/task.service';
-
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-todo-update',
   templateUrl: './todo-update.component.html',
@@ -15,7 +15,8 @@ export class TodoUpdateComponent implements OnInit {
   constructor(
     private taskService: TaskService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private toastr: ToastrService
   ) {}
 
   ngOnInit(): void {
@@ -32,6 +33,7 @@ export class TodoUpdateComponent implements OnInit {
     if (this.taskId !== null) {
       this.taskService.updateTask(this.taskId, this.task).subscribe(() => {
         console.log('updated');
+        this.toastr.success('Task is Updated', 'Success!');
         this.router.navigate(['/home']);
       });
     }

@@ -1,7 +1,5 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
-/*
-@import "ngx-toastr/toastr";
-@import "ngx-toastr/toastr-bs4-alert"; */
+
 :root {
   --main: #1f201f;
   --bg: #a1a6a1;
