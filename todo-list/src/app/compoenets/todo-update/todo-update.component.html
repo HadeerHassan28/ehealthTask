@@ -1,5 +1,5 @@
 <div class="container">
-  <h1 class="title mt-4">Update {{ task?.title }}</h1>
+  <h1 class="title mt-4">Update {{ task.title }}</h1>
   <!-- <div class="row row-container mt-5">
     <div class="col-sm-12 col-md-6 col-lg-6">
       <img src="/assets/Images/update.jpeg" alt="Task Image" class="img" />
@@ -10,20 +10,22 @@
     <input
       type="text"
       [placeholder]="
-        task?.description != null ? task?.description : 'Enter the description'
+        task.description != null ? task.description : 'Enter the description'
       "
       class="form-control input"
       name="description"
       [(ngModel)]="task.description"
       required
+      name="description"
     />
     <label class="form-label label mb-0 mt-3">Task Statues</label>
     <input
       type="text"
-      [placeholder]="task?.status != null ? task?.status : 'Enter the status'"
+      [placeholder]="task.status != null ? task.status : 'Enter the status'"
       [(ngModel)]="task.status"
       required
       class="form-control input"
+      name="status"
     />
     <button class="btn btn-success mt-2 w-50" type="submit">Update</button>
   </form>
