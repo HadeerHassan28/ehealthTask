@@ -1,0 +1,30 @@
+.container {
+  border: 1px solid var(--border);
+  padding: 60px;
+}
+
+.img {
+  width: 80%;
+  border-radius: 10px;
+}
+.text-container {
+  display: flex;
+
+  flex-direction: column;
+  gap: 30px;
+}
+.title {
+  color: var(--progress);
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+.sub-title {
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.text {
+  text-align: justify;
+  font-size: 20px;
+}
